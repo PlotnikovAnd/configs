@@ -1,5 +1,13 @@
 htop/
 go/
-fish/
 dconf/
 docker/
+exercism/
+libvirt/
+fish/completions/exercism.fish
+fish/completions/fisher.fish
+fish/functions/fisher.fish
+fish/functions/ez.fish
+fish/fish_plugins
+fish/fish_variables
+fish/functions/fish_prompt.fish
