@@ -7,7 +7,8 @@ return {
 			python      = { 'ruff' },
 			ansible     = { 'ansible_lint' },
 			yamllint    = { 'yamllint' },
-			systemdlint = { 'systemdlint' }
+			systemdlint = { 'systemdlint' },
+			cmakelint   = { 'cmakelint' }
 		}
 		vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 			callback = function()

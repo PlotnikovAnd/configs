@@ -4,13 +4,18 @@ return {
 		config = function()
 			local lspconfig = require('lspconfig')
 
-			vim.lsp.set_log_level("debug")
+			vim.lsp.set_log_level("info")
 			lspconfig.lua_ls.setup {}
 			lspconfig.rust_analyzer.setup {}
 			lspconfig.cmake.setup {}
 			lspconfig.bashls.setup {}
 			lspconfig.jsonls.setup {}
 			lspconfig.marksman.setup {}
+			lspconfig.black.setup {}
+			lspconfig.flake8.setup {}
+			lspconfig.gopls.setup {}
+			lspconfig.ruff.setup {}
+			lspconfig.xmlformatter.setup {}
 			lspconfig.clangd.setup {
 				cmd = {
 					"clangd"

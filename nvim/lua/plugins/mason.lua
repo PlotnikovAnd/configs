@@ -15,10 +15,18 @@ return {
 		config = function()
 			require('mason-lspconfig').setup {
 				ensure_installed = {
-					"lua_ls",
-					"rust_analyzer",
+					"bashls",
+					"black",
+					"clangd",
+					"cmake",
+					"flake8",
 					"gopls",
-					"clangd"
+					"jsonls",
+					"lua_ls",
+					"marksman",
+					"ruff",
+					"rust_analyzer",
+					"xmlformatter"
 				}
 			}
 		end
