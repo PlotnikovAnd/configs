@@ -11,11 +11,8 @@ return {
 			lspconfig.bashls.setup {}
 			lspconfig.jsonls.setup {}
 			lspconfig.marksman.setup {}
-			lspconfig.black.setup {}
-			lspconfig.flake8.setup {}
 			lspconfig.gopls.setup {}
 			lspconfig.ruff.setup {}
-			lspconfig.xmlformatter.setup {}
 			lspconfig.clangd.setup {
 				cmd = {
 					"clangd"
@@ -24,7 +21,6 @@ return {
 				on_attach = function(client, bufnr)
 					-- Отключаем semanticTokens, если не используются
 					client.server_capabilities.semanticTokensProvider = nil
-
 					-- Здесь остальное содержимое из "LspAttach"
 				end,
 
