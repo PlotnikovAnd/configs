@@ -16,17 +16,14 @@ return {
 			require('mason-lspconfig').setup {
 				ensure_installed = {
 					"bashls",
-					"black",
 					"clangd",
 					"cmake",
-					"flake8",
 					"gopls",
 					"jsonls",
 					"lua_ls",
 					"marksman",
 					"ruff",
 					"rust_analyzer",
-					"xmlformatter"
 				}
 			}
 		end
