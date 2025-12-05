@@ -4,13 +4,12 @@ vim.o.cursorlineopt = 'both'
 
 local map = vim.keymap.set
 
-map('i', 'jj', '<Esc>')
-map('i', 'оо', '<Esc>')
+map('i', 'jj', '<Esc>', { desc = "Exit insert mode" })
 
 -- Buffers
 map('n', '<leader>w', ':w<CR>')
 -- map({'n','i','v'}, '<C-s>', '<cmd>wa<CR>')
-map('n', '<leader>nh', ':noh<CR>')
+map('n', '<leader>nh', ':noh<CR>', { desc = "Disable highlighting" })
 
 -- Navigation
 map('n', '<c-k>', ':wincmd k<CR>')
@@ -25,10 +24,10 @@ map('n', '<leader>s', ':split<CR>')
 map('n', '<leader>e', ':Neotree left toggle reveal<CR>')
 
 -- Buffers
-map('n', '<Tab>', ':BufferLineCycleNext<CR>')
-map('n', '<s-Tab>', ':BufferLineCyclePrev<CR>')
-map('n', '<leader>x', ':BufferLinePickClose<CR>')
-map('n', '<c-x>', ':BufferLineCloseOthers<CR>')
-map('n', '<leader>bd', ':bd<CR>')
+map('n', '<Tab>', ':BufferLineCycleNext<CR>', { desc = "go to next Tab" })
+map('n', '<s-Tab>', ':BufferLineCyclePrev<CR>', { desc = "go to prev Tab" })
+map('n', '<leader>bc', ':BufferLinePickClose<CR>', { desc = "Pick buffer to close" })
+map('n', '<leader>bd', ':bd<CR>', { desc = "Close this buffer" })
+-- map('n', '<leader>bd', ':bd<CR>', {desc=""})
 
-map('n', '<leader>rn', function() vim.lsp.buf.rename() end, opts, { desc = "Lsp Rename"})
+map('n', '<leader>rn', function() vim.lsp.buf.rename() end, opts, { desc = "Lsp Rename" })
