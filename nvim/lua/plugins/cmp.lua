@@ -25,29 +25,29 @@ return {
 			-- 2. Настройка клавиш (Mappings)
 			mapping = cmp.mapping.preset.insert({
 				-- Прокрутка документации (если есть)
-				['<C-b>'] = cmp.mapping.scroll_docs(-4),
-				['<C-f>'] = cmp.mapping.scroll_docs(4),
+				["<C-b>"] = cmp.mapping.scroll_docs(-4),
+				["<C-f>"] = cmp.mapping.scroll_docs(4),
 
 				-- Вызов меню автодополнения вручную (Ctrl + Space)
-				['<C-Space>'] = cmp.mapping.complete(),
+				["<C-Space>"] = cmp.mapping.complete(),
 
 				-- Отмена (Esc или Ctrl+e)
-				['<C-e>'] = cmp.mapping.abort(),
+				["<C-e>"] = cmp.mapping.abort(),
 
 				-- ENTER: Подтверждение выбора
-				['<CR>'] = cmp.mapping.confirm({
+				["<CR>"] = cmp.mapping.confirm({
 					select = true, -- Если true, то Enter выберет первый пункт, даже если вы его не выделили явно
 					behavior = cmp.ConfirmBehavior.Replace,
 				}),
 
 				-- TAB: Супер-Таб (циклическое переключение)
-				['<Tab>'] = cmp.mapping(function(fallback)
+				["<Tab>"] = cmp.mapping(function(fallback)
 					if cmp.visible() then
 						-- Если меню открыто — идем вниз
 						cmp.select_next_item()
-					elseif luasnip.expand_or_jumpable() then
-						-- Если мы внутри сниппета — прыгаем к следующей позиции ($1 -> $2)
-						luasnip.expand_or_jump()
+					-- elseif luasnip.expand_or_jumpable() then
+					-- 	-- Если мы внутри сниппета — прыгаем к следующей позиции ($1 -> $2)
+					-- 	luasnip.expand_or_jump()
 					else
 						-- Иначе — просто печатаем Tab
 						fallback()
@@ -55,7 +55,7 @@ return {
 				end, { "i", "s" }),
 
 				-- SHIFT + TAB: Движение назад
-				['<S-Tab>'] = cmp.mapping(function(fallback)
+				["<S-Tab>"] = cmp.mapping(function(fallback)
 					if cmp.visible() then
 						-- Если меню открыто — идем вверх
 						cmp.select_prev_item()
