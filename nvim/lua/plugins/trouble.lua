@@ -32,10 +32,10 @@ return {
 
 		-- Б) Открыть то, что пришло из TELESCOPE (ваше Alt-q)
 		-- Добавляем этот маппинг, чтобы возвращать результаты поиска
-		{
-			"<leader>xt", -- t = Telescope
-			"<cmd>Trouble telescope toggle<cr>",
-			desc = "Telescope Results (Trouble)",
-		},
+		-- {
+		-- 	"<leader>xt", -- t = Telescope
+		-- 	"<cmd>Trouble telescope toggle<cr>",
+		-- 	desc = "Telescope Results (Trouble)",
+		-- },
 	},
 }
