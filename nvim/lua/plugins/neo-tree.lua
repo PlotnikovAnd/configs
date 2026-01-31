@@ -1,8 +1,8 @@
 return {
 	"nvim-neo-tree/neo-tree.nvim",
+	enabled = false,
 	branch = "v3.x",
-	dependencies =
-	{
+	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"nvim-tree/nvim-web-devicons",
 		"MunifTanjim/nui.nvim",
@@ -11,10 +11,8 @@ return {
 		vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none", fg = "none" })
 		vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none", fg = "none" })
 		vim.diagnostic.config({
-			signs =
-			{
-				text =
-				{
+			signs = {
+				text = {
 					[vim.diagnostic.severity.ERROR] = " ",
 					[vim.diagnostic.severity.WARN] = " ",
 					[vim.diagnostic.severity.INFO] = " ",
@@ -28,9 +26,7 @@ return {
 			filesystem = {
 				hide_dotfiles = false,
 				hide_gitignored = false,
-
-			}
-
+			},
 		})
 	end,
 }
